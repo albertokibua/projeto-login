@@ -32,8 +32,7 @@ section#login{
 
     left: 50%;/* La définition de cette position fut   
                  possible grace à la position absolute*/
-    transform:translate(-50%, -50%);/*permet de     
-                         reposition notre objet au centre*/
+    
     overflow: hidden;/*Pour cacher tout qui dépasser le 
                       limite défini*/
     background-color: white; 
@@ -41,19 +40,21 @@ section#login{
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0.450);
+    transform:translate(-50%, -50%);/*permet de     
+                         reposition notre objet au centre*/
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
 section#login > div#imagem{
     display: block;
-    background:#5f2c82 url(../imagens/building.jpg) no-repeat;
+    background:#5f2c82 url(../imagens/Profil_Smile.jpeg) no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     height: 200px;
 }
 
-section#login > div#forrmulario{
+section#login > div#formulario{
     display: block;
     padding: 10px;
 }
@@ -67,6 +68,7 @@ div#formulario >p{
 
 form > div.campo{
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
@@ -79,9 +81,9 @@ div.campo > label{
    
 }
 
-div.campo >span{
+div.campo > span{
     color: white;
-    background-color: black;
+    /*background-color: black;*/
     font-size: 2em;
     width: 40px;
     padding: 5px;
@@ -90,12 +92,17 @@ div.campo >span{
 div.campo > input {
     background-color: #94cfcd;
     font-size: 1em;
-    width: calc(100% - 44px);
+    width: calc(100% - 45px);
     height: 100%;
-    transform: translateY(-12px);    
     border: 0px;
     border-radius: 8px;
-    padding: 4px;
+    padding: 3px;
+    transform: translateY(-13px);  
+}
+
+div.campo >input:focus-within{
+    background-color: white;
+    border: none;
 }
 
 
@@ -103,9 +110,9 @@ div.campo > input {
 form  > input[type=submit]{
     display: block;
     font-size: 1em;
-    height: 40px;
     width: 100%;
-    background-color: #49a09d;
+    height: 40px;    
+    background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
